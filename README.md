@@ -76,3 +76,7 @@
 - TicketCreated , TicketUpdated
 
 - ChargeCreated
+
+## Setting Base Error Structure
+
+As there can be many language independent services in cluster. It is highly important to maintain a fixed error response accross the services.
