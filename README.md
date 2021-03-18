@@ -80,3 +80,11 @@
 ## Setting Base Error Structure
 
 As there can be many language independent services in cluster. It is highly important to maintain a fixed error response accross the services.
+
+## NATS Streaming Sever
+
+Docs - docs.nats.io
+NATS and NATS Streaming Server are two service
+
+- We create chanels/topic
+- required service will subscribe and listen to that channel
