@@ -88,3 +88,26 @@ NATS and NATS Streaming Server are two service
 
 - We create chanels/topic
 - required service will subscribe and listen to that channel
+
+**client library** -> node-nats-streaming
+
+
+**Event Logging**
+1.  Used to handle downtime for a particular service. So that at any point of time when service is up. It can read event logs and be up to date.
+1.  When new service is developed it can always be in sync with other service
+
+NATS Streaming will by defualt store events *in memory* but can also can be stored in DB.
+
+client in nats is called as stan. (Terminology in NATS..Its NATS in backwards)
+
+## Port forwarding
+
+For quickly expose pod outside cluster , we can use three ways
+1. Node Cluster
+1. Routing in ingress controller to specific cluster ip
+1. port forwarding (fastest way for quick test)
+
+Ex: kubectl port-forward <pod_name> <port_on_local_machine>:<port_on_actual_pod>
+
+Publisher - data + Subject(name of channel/topic)
+Listener - subscription to topic/channel.  
